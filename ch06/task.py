@@ -2,8 +2,8 @@ import svmMLiA
 
 task = 1
 
-def loadDataSet(): 
-    dataArr,labelArr=svmMLiA.loadDataSet('testSet.txt')
+def load_dataset(): 
+    dataArr,labelArr=svmMLiA.load_dataset('testSet.txt')
     print(labelArr)
 
 def stocGradAscent0():
@@ -18,7 +18,7 @@ def default():
     print("Invalid Operation!")
 
 switch={
-    1:loadDataSet,
+    1:load_dataset,
     2:stocGradAscent0,
     3:stocGradAscent1,
     4:colicTest

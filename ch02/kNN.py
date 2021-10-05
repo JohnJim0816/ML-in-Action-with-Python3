@@ -126,13 +126,13 @@ def classifyPerson():
 
 #函数功能：将图像格式处理为一个向量
 def img2vector(filename):
-    returnVect = zeros((1,1024))
+    words_vect = zeros((1,1024))
     fr = open(filename)
     for i in range(32):
         lineStr = fr.readline()
         for j in range(32):
-            returnVect[0,32*i+j] = int(lineStr[j])
-    return returnVect
+            words_vect[0,32*i+j] = int(lineStr[j])
+    return words_vect
 
 '''
 testVector=img2vector('testDigits/0_13.txt')

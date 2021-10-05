@@ -2,7 +2,7 @@ import numpy as np
 import random
 
 
-def loadDataSet(fileName):
+def load_dataset(fileName):
     dataMat = []; labelMat = []
     fr = open(fileName)
     for line in fr.readlines():
