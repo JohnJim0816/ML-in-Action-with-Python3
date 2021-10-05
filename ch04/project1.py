@@ -7,7 +7,7 @@ import bayes
 posts_list,labels_list = bayes.load_dataset()
 vocab_list = bayes.create_vocab_list(posts_list)
 train_mat = []
-for postinDoc in posts_list:
-    train_mat.append(bayes.words2vec(vocab_list,postinDoc))
+for post in posts_list:
+    train_mat.append(bayes.words2vec(vocab_list,post))
 p0V,p1V,PAb = bayes.trainNB0(train_mat,labels_list)
 print(p0V,p1V,PAb)

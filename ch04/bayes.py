@@ -85,8 +85,8 @@ def testingNB():
     posts_list,labels_list = load_dataset()
     myvocab_list = createvocab_list(posts_list)
     trainMat=[]
-    for postinDoc in posts_list:
-        trainMat.append(words2vec(myvocab_list, postinDoc))
+    for post in posts_list:
+        trainMat.append(words2vec(myvocab_list, post))
     p0V,p1V,pAb = trainNB0(np.array(trainMat),np.array(labels_list))
     testEntry = ['love', 'my', 'dalmation']
     thisDoc = np.array(words2vec(myvocab_list, testEntry))
